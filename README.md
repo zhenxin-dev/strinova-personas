@@ -15,10 +15,13 @@
 
 ```text
 .
-├── personas/    # 角色提示词
+├── examples/    # 组合示例
+├── personas/    # 角色提示词与模板
+├── scripts/     # 最小校验脚本
 ├── world/       # 跨角色复用的世界观补充
 ├── AGENTS.md    # 仓库协作说明
 ├── CLAUDE.md    # Claude Code 入口，引用 AGENTS.md
+├── SOURCES.md   # 来源登记总表
 └── README.md
 ```
 
@@ -28,6 +31,7 @@
 2. 如果对话需要更多背景，再补充 `world/` 里的相关文档。
 3. 用户消息里明确场景、关系和目标，模型会更稳定。
 4. 若官方资料没有明确写明，保持保守，不把推断写成硬设定。
+5. 如果想直接套用组合，可以先看 [examples/组合示例.md](examples/组合示例.md)。
 
 一个最简单的组合方式：
 
@@ -90,8 +94,20 @@ User:
 | [world/世界观概览.md](world/世界观概览.md) | 快速理解基础世界观 |
 | [world/地点索引.md](world/地点索引.md) | 常见地点与活动区域对照 |
 | [world/阵营关系.md](world/阵营关系.md) | 阵营之间的主要关系 |
+| [world/人物关系索引.md](world/人物关系索引.md) | 角色之间的明确关系与组织定位速查 |
 | [world/术语速查.md](world/术语速查.md) | 常见名词与术语说明 |
 | [world/写作边界.md](world/写作边界.md) | 避免误写和过度扩写 |
+
+## 维护辅助文件
+
+这些文件主要服务仓库维护，不直接作为角色提示词投喂：
+
+| 文件 | 用途 |
+|------|------|
+| [personas/TEMPLATE.md](personas/TEMPLATE.md) | 新增角色时的统一起稿模板 |
+| [SOURCES.md](SOURCES.md) | 全仓库来源登记与维护状态说明 |
+| [examples/组合示例.md](examples/组合示例.md) | 现成的角色与 world 组合方式 |
+| [scripts/validate.sh](scripts/validate.sh) | 最小结构校验脚本 |
 
 ## 编写原则
 
